@@ -1,0 +1,140 @@
+/*
+    This is a generic Style sheet.
+    It contains formatting for colours, fonts and table layouts.
+    Browser specific layouts can be found in netscape.css, ie11.css and ie9.css.
+
+    Last Modified: 22/11/2020
+    Modified by: Rob Lamprell
+*/
+
+html {
+    scroll-behavior:    smooth;
+}
+
+html, body {
+    width:  100%;
+    height: 100%;
+}
+
+body {
+    margin:             0;
+    background-color:   black;
+    font-family:        Arial;
+}
+
+header {
+    background-color:   black;
+    color:              whitesmoke;
+    text-align:         center;
+}   
+
+h1 {
+    font-size:      5em;
+    text-decoration:underline overline;
+}
+
+main {
+    text-align: center;
+}
+
+input {
+    width:  12em;
+    margin: .5em;
+    text-align: center; 
+}
+
+h2 {
+    text-align: center;
+    color:      whitesmoke;
+}
+
+table {
+    /* center */
+    margin-left:    auto;
+    margin-right:   auto;
+}
+
+section.diceImages {
+    grid-area:  d;
+    text-align: center;
+}
+
+img {
+    background-color:   whitesmoke;
+    border:             5px solid black;
+    border-radius:      15px;
+}
+
+button {
+    width:              100px;
+    height:             100px;
+    margin:             10px;
+    padding:            10px;
+    border-radius:      15px;
+    background-color:   black;
+    border-color:       whitesmoke;
+    color:              whitesmoke;
+    font-size:          16px;
+    text-align:         center;
+    font-weight:        bold;
+    cursor:             pointer;
+    outline:            none;
+}
+
+section.buttons {
+    grid-auto-flow: row;
+    justify-self:   center;
+}
+
+tr {
+    display: block;
+}
+
+/* Shift the table to single row */
+@media  (min-width: 600px) {
+    tr {
+        float: left;
+    }
+}
+
+td {
+    display:block; 
+    margin: 20px;
+}
+
+th {
+    display:block; 
+    border: 1px solid whitesmoke;
+}
+
+tr, td, th {
+    background-color:   black;
+    color:              whitesmoke;
+    border-radius:      15px;
+    margin:             0 1px;
+    padding:            10px;
+}
+
+footer {
+    min-width:        10px;
+    padding:          1em;
+
+    /* ie9.css overrides flex and uses floats instead (ie9_Assignment_2) */
+    display:          flex;
+    align-items:      flex-end;
+
+    color:            white;
+    font-size:        .8em;
+    background-color: black;
+    padding:           0 10px;
+
+    border-top: 1px solid whitesmoke;
+}
+
+footer a, p {
+    color: whitesmoke;
+}
+
+footer h2 {
+    text-align: left;
+}

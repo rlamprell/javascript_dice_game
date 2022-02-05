@@ -1,0 +1,66 @@
+/*  
+    This is a layout stylesheet designed to add support for Internet Explorer 9.
+
+    Last Modified: 22/11/2020
+    Modified by: Rob Lamprell
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {    
+    text-align: center;
+}
+
+main {
+    display: block;
+    height: 75%;
+}
+
+/*  This ensures the footer is at the bottom of the page without 
+    there being too much blank space in the main*/
+@media (min-width: 0px) {
+    header, footer  {height: 15em;}
+    main            {min-height: 66em;}
+}
+
+@media (min-width: 300px) {
+    main            {min-height: 56em;}
+    footer          {height: 12em;}
+}
+
+@media (min-width: 400px) {
+    header          {height: 10em;}
+    main            {min-height: 50em;}
+    footer          {height: 8em;}
+}
+
+@media (min-width: 600px) {
+    main            {min-height: 40em;}
+}
+
+footer {
+    width: 100%;
+}
+
+/* Align the two items to the lhs and rhs of the footer */
+footer .foot-modified{
+    width:      45%;
+    float:      left;
+    text-align: left;
+}
+
+footer .foot-copyright{
+    width:      45%;
+    float:      right;
+    text-align: left;
+}
+
+
+
+
+
+
+
+

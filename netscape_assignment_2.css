@@ -1,0 +1,41 @@
+/*  
+    This is a layout stylesheet designed to add support for modern browsers.
+    The layout has been tested for: 
+        - Google Chrome
+        - Firefox
+        - Edge
+
+    Last Modified: 22/11/2020
+    Modified by: Rob Lamprell
+*/
+
+body {    
+    display: grid;
+
+    grid-template-columns: 
+        minmax(1.5em, auto) minmax(200px, 1024px) minmax(1.5em, auto);
+
+    grid-template-rows: 
+        .5fr 3fr .5fr;
+
+    grid-template-areas: 
+        "h h h"
+        ". m ."
+        "f f f";
+}
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
+
+footer {
+    grid-area: f;
+}
+
+footer > * {
+    flex: 1;
+}

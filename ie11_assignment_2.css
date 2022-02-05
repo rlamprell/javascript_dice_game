@@ -1,0 +1,143 @@
+/*  
+    This is a layout stylesheet designed to add support for Internet Explorer 11 and 10.
+    These two iterations support a modified version of 'grid'. Specifically -ms-grid.
+
+    Last Modified: 22/11/2020
+    Modified by: Rob Lamprell
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {    
+    display: -ms-grid;
+    -ms-grid-columns: 1.5em 1fr 1.5em;
+}
+
+/*  This ensures the footer is at the bottom of the page without 
+    there being too much blank space in the main*/
+@media (min-width: 0px) {
+    body {
+        -ms-grid-rows: 15em minmax(66em, 80%) 15em;
+    }
+}
+
+@media (min-width: 300px) {
+    body {
+        -ms-grid-rows: 15em minmax(56em, 80%) 12em;
+    }
+}
+
+@media (min-width: 400px) {
+    body {
+        -ms-grid-rows: 15em minmax(54em, 80%) 8em;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        -ms-grid-rows: 10em minmax(40em, 80%) 8em;
+    }
+}   
+
+header {
+    -ms-grid-column:        1;
+    -ms-grid-column-span:   3;
+    -ms-grid-row:           1;
+}
+
+main {
+    -ms-grid-column:2;
+    -ms-grid-row:   2;
+
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+}
+
+/* 2*3 dice image layout */
+@media (max-width: 600px) {
+    
+    .diceImages {
+        display: -ms-grid;
+
+        -ms-grid-columns:   3;
+        -ms-grid-rows:      2;
+    }
+
+    #diceImgs0 {
+        -ms-grid-column:1;
+        -ms-grid-row:   1;
+    }
+    #diceImgs1 {
+        -ms-grid-column:2;
+        -ms-grid-row:   1;
+    }
+    #diceImgs2 {
+        -ms-grid-column:3;
+        -ms-grid-row:   1;
+    }
+    #diceImgs3 {
+        -ms-grid-column:1;
+        -ms-grid-row:   2;
+    }
+    #diceImgs4 {
+        -ms-grid-column:2;
+        -ms-grid-row:   2;
+    }
+    #diceImgs5 {
+        -ms-grid-column:3;
+        -ms-grid-row:   2;
+    }
+}
+
+/* 3*2 dice image layout */
+@media (max-width: 300px) {
+    
+    .diceImages {
+        display: -ms-grid;
+
+        -ms-grid-columns: 2;
+        -ms-grid-rows: 3;
+    }
+
+    #diceImgs0 {
+        -ms-grid-column:1;
+        -ms-grid-row:   1;
+    }
+    #diceImgs1 {
+        -ms-grid-column:2;
+        -ms-grid-row:   1;
+    }
+    #diceImgs2 {
+        -ms-grid-column:1;
+        -ms-grid-row:   2;
+    }
+    #diceImgs3 {
+        -ms-grid-column:2;
+        -ms-grid-row:   2;
+    }
+    #diceImgs4 {
+        -ms-grid-column:1;
+        -ms-grid-row:   3;
+    }
+    #diceImgs5 {
+        -ms-grid-column:2;
+        -ms-grid-row:   3;
+    }
+}
+
+footer {
+    -ms-grid-column:        1;
+    -ms-grid-column-span:   3;
+    -ms-grid-row:           3;
+}
+
+
+footer > * {
+    flex: 1;
+}
+
+
+
